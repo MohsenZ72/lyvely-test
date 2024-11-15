@@ -12,9 +12,10 @@ This is a standalone Angular project using **Tailwind CSS** for styling. The pro
   - `/profile/2`, `/profile/3`, ...: Other users' profiles
 - **Follow/Unfollow**: You can follow and unfollow users directly from their profile.
 - **Search client-side in Followers/Following**: Users can search and filter through their followers and following lists.
-
 - **Image error handling**: The project uses conditional logic to replace broken images with fallback images.
 - **Tailwind CSS**: The project uses Tailwind CSS for utility-first styling.
+- **Redirect on Profile Image Click**: If you click on the profile image in the header, you will be redirected to your profile.
+- **Follow Button Behavior**: The follow button does not work on other users' profiles. To interact with followers/following, go to your own profile and open the dialog by clicking on "Followers" or "Following".
 
 > **Note**: The layout and features are based on a design, but only the necessary parts have been implemented for this project. The full design is not complete, but the key features are functional.
 
