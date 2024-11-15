@@ -7,15 +7,14 @@ export interface ProfileState {
 }
 
 export const initialState: ProfileState = {
-  profile: null // Default state is null
+  profile: null
 }
 
 export const profileReducer = createReducer(
   initialState,
   on(setProfile, (state, { profile }) => ({
-    // Destructure profile from the action
     ...state,
-    profile // Set the profile correctly
+    profile
   })),
 
   on(removeFollowing, (state, { id }) => {
@@ -39,10 +38,10 @@ export const profileReducer = createReducer(
         ...state,
         profile: {
           ...state.profile,
-          following: [...state.profile.following, profile] // Add the profile to following list
+          following: [...state.profile.following, profile]
         }
       }
     }
-    return state // Return the unchanged state if profile is null
+    return state
   })
 )

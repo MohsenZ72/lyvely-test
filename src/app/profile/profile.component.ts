@@ -28,11 +28,11 @@ export class ProfileComponent implements OnInit, OnDestroy {
   userId: string | null = null
   otherProfile: boolean = false
   profile$: Observable<ProfileModel | null>
-  routeSub: Subscription | null = null // To hold the subscription for route changes
+  routeSub: Subscription | null = null
 
   constructor(
     private route: ActivatedRoute,
-    private store: Store<{ profile: ProfileState }>, // Use ProfileState
+    private store: Store<{ profile: ProfileState }>,
     private http: HttpClient,
     private router: Router
   ) {
@@ -53,7 +53,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     if (this.routeSub) {
-      this.routeSub.unsubscribe() // Clean up the subscription when the component is destroyed
+      this.routeSub.unsubscribe()
     }
   }
 

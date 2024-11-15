@@ -9,6 +9,7 @@
       [src]="coverImage"
       alt="Cover Image"
       class="object-cover w-full h-full"
+      (error)="onImageError('cover')"
     />
     <div
       class=""
@@ -45,6 +46,7 @@
         [src]="profileImage"
         alt="Profile Image"
         class="object-cover w-full h-full"
+        (error)="onImageError('profile')"
       />
     </div>
   </div>

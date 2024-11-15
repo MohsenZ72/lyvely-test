@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core'
 import { FollowerModel, FollowingModel } from '../../profile.model'
 import { Router } from '@angular/router'
 import { Store } from '@ngrx/store'
-import { addFollowing, removeFollowing } from '../../store/profile.actions' // Adjust this import to your actual store actions
+import { addFollowing, removeFollowing } from '../../store/profile.actions'
 
 @Component({
   selector: 'app-followers-card',
@@ -34,7 +34,6 @@ export class FollowerCardComponent {
 
   onFollowBack(profile: FollowerModel | undefined) {
     if (profile) {
-      // Dispatch action to add the profile to following list
       this.store.dispatch(addFollowing({ profile }))
     }
   }
