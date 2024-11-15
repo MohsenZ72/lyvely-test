@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-header',
@@ -8,4 +9,10 @@ import { Component, Input } from '@angular/core'
 })
 export class HeaderComponent {
   @Input() profileImage?: string = './assets/images/Avatar.jpg'
+
+  constructor(private router: Router) {}
+
+  redirectToProfile(): void {
+    this.router.navigate(['/profile', 1])
+  }
 }
