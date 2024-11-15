@@ -1,0 +1,14 @@
+<div>
+  <div [ngClass]="['flex px-4', otherProfile ? 'mt-4 md:-mt-6 ' : 'mt-4']">
+    <app-button
+      class="md:w-auto w-full"
+      [label]="otherProfile ? 'Follow' : 'Create'"
+      [style]="'filled'"
+    />
+    <app-button
+      class="ml-2 md:w-auto hidden md:block"
+      [label]="otherProfile ? 'Grateful' : 'Start monetizing'"
+      [style]="otherProfile ? 'filled-dark' : 'outline'"
+    />
+  </div>
+</div>

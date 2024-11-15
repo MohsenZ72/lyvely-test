@@ -1,0 +1,53 @@
+<div class="flex items-center justify-between p-4 rounded-lg w-full max-w-md">
+  <div class="flex items-center space-x-4" (click)="openGoToUser(profile?.id)">
+    <img
+      [src]="profile?.profileImageUrl"
+      alt="Profile Picture"
+      class="w-12 h-12 rounded-full object-cover"
+      onerror="this.src='fallback-image-url'"
+    />
+    <div>
+      <div class="flex items-center space-x-1">
+        <h2 class="text-white font-semibold text-lg">
+          {{ profile?.fullName }}
+        </h2>
+        <svg
+          class="w-5 h-5 text-[#30E3CA]"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-4-4 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+          ></path>
+        </svg>
+      </div>
+      <p class="text-gray-400">{{ profile?.username }}</p>
+    </div>
+  </div>
+  @if(type !== 'following'){ @if(!isFollowed(profile?.id)){
+  <button
+    (click)="onFollowBack(profile)"
+    class="flex items-center text-white bg-transparent hover:bg-[#2E2E3C] rounded-lg px-4 py-2 cursor-pointer"
+  >
+    <svg
+      class="w-5 h-5 mr-1"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15 14H9v-2h6v2zm-3-12C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+      ></path>
+    </svg>
+    <span>Follow back</span>
+  </button>
+  } }@else{
+  <button
+    (click)="onUnfollow(profile?.id)"
+    class="flex items-center text-white bg-transparent hover:bg-[#2E2E3C] rounded-lg px-4 py-2"
+  >
+    <span>unfollow</span>
+  </button>
+  }
+</div>

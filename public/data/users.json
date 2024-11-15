@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "username": "@john-doe",
+    "fullName": "John Doe",
+    "bio": "Hey, there!<br/> I love coding and sharing my journey.<br/> Follow me for more updates!",
+    "profileImageUrl": "./assets/images/Avatar.jpg",
+    "coverImageUrl": "./assets/images/Cover.jpg",
+    "followers": [
+      {
+        "id": 2,
+        "username": "@jane-smith",
+        "fullName": "Jane Smith",
+        "profileImageUrl": "https://picsum.photos/id/1012/100/100"
+      },
+      {
+        "id": 4,
+        "username": "@mike-jones",
+        "fullName": "Mike Jones",
+        "profileImageUrl": "https://picsum.photos/id/1014/100/100"
+      },
+      {
+        "id": 5,
+        "username": "@emily-jones",
+        "fullName": "Emily Jones",
+        "profileImageUrl": "https://picsum.photos/id/1016/100/100"
+      }
+    ],
+    "following": [
+      {
+        "id": 3,
+        "username": "@alice-brown",
+        "fullName": "Alice Brown",
+        "profileImageUrl": "https://picsum.photos/id/1013/100/100"
+      },
+      {
+        "id": 2,
+        "username": "@jane-smith",
+        "fullName": "Jane Smith",
+        "profileImageUrl": "https://picsum.photos/id/1012/100/100"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "username": "@jane-smith",
+    "fullName": "Jane Smith",
+    "bio": "Bookworm and coffee lover.<br/> Always learning and exploring new stories.",
+    "profileImageUrl": "https://picsum.photos/id/1012/100/100",
+    "coverImageUrl": "https://picsum.photos/id/1015/600/200",
+    "followers": [
+      {
+        "id": 1,
+        "username": "@john-doe",
+        "fullName": "John Doe",
+        "profileImageUrl": "https://picsum.photos/id/1011/100/100"
+      },
+      {
+        "id": 5,
+        "username": "@emily-jones",
+        "fullName": "Emily Jones",
+        "profileImageUrl": "https://picsum.photos/id/1016/100/100"
+      }
+    ],
+    "following": [
+      {
+        "id": 3,
+        "username": "@alice-brown",
+        "fullName": "Alice Brown",
+        "profileImageUrl": "https://picsum.photos/id/1013/100/100"
+      },
+      {
+        "id": 4,
+        "username": "@mike-jones",
+        "fullName": "Mike Jones",
+        "profileImageUrl": "https://picsum.photos/id/1014/100/100"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "username": "@alice-brown",
+    "fullName": "Alice Brown",
+    "bio": "Photographer & cat lover.<br/> Capturing moments one click at a time.",
+    "profileImageUrl": "https://picsum.photos/id/1013/100/100",
+    "coverImageUrl": "https://picsum.photos/id/1017/600/200",
+    "followers": [
+      {
+        "id": 2,
+        "username": "@jane-smith",
+        "fullName": "Jane Smith",
+        "profileImageUrl": "https://picsum.photos/id/1012/100/100"
+      }
+    ],
+    "following": [
+      {
+        "id": 5,
+        "username": "@emily-jones",
+        "fullName": "Emily Jones",
+        "profileImageUrl": "https://picsum.photos/id/1016/100/100"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "username": "@mike-jones",
+    "fullName": "Mike Jones",
+    "bio": "Hey, Em, it's Paul<br/>Uh,<br/>I was listening to the album<br/>Good luck, you're on your own",
+    "profileImageUrl": "https://picsum.photos/id/1014/100/100",
+    "coverImageUrl": "https://picsum.photos/id/1018/600/200",
+    "followers": [
+      {
+        "id": 1,
+        "username": "@john-doe",
+        "fullName": "John Doe",
+        "profileImageUrl": "https://picsum.photos/id/1011/100/100"
+      }
+    ],
+    "following": [
+      {
+        "id": 2,
+        "username": "@jane-smith",
+        "fullName": "Jane Smith",
+        "profileImageUrl": "https://picsum.photos/id/1012/100/100"
+      },
+      {
+        "id": 3,
+        "username": "@alice-brown",
+        "fullName": "Alice Brown",
+        "profileImageUrl": "https://picsum.photos/id/1013/100/100"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "username": "@emily-jones",
+    "fullName": "Emily Jones",
+    "bio": "Yoga instructor and wellness enthusiast.<br/> Embrace peace, breathe deeply, and live mindfully.",
+    "profileImageUrl": "https://picsum.photos/id/1016/100/100",
+    "coverImageUrl": "https://picsum.photos/id/1019/600/200",
+    "followers": [
+      {
+        "id": 3,
+        "username": "@alice-brown",
+        "fullName": "Alice Brown",
+        "profileImageUrl": "https://picsum.photos/id/1013/100/100"
+      }
+    ],
+    "following": [
+      {
+        "id": 1,
+        "username": "@john-doe",
+        "fullName": "John Doe",
+        "profileImageUrl": "https://picsum.photos/id/1011/100/100"
+      },
+      {
+        "id": 4,
+        "username": "@mike-jones",
+        "fullName": "Mike Jones",
+        "profileImageUrl": "https://picsum.photos/id/1014/100/100"
+      }
+    ]
+  }
+]

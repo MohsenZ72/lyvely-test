@@ -1,0 +1,33 @@
+<div
+  [ngClass]="[
+    otherProfile
+      ? 'lg:w-[600px] mx-auto bg-[#1B1426] rounded-lg mt-0 lg:mt-5 pb-4'
+      : 'p-0 lg:p-5'
+  ]"
+>
+  <app-profile-header
+    [otherProfile]="otherProfile"
+    [coverImage]="(profile$ | async)?.coverImageUrl"
+    [profileImage]="(profile$ | async)?.profileImageUrl"
+  />
+  <div
+    [ngClass]="[
+      'flex w-full relative z-[2] flex-col md:flex-row',
+      otherProfile ? 'justify-between' : ' mt-0 lg:-mt-[120px]'
+    ]"
+  >
+    <div
+      class=""
+      [ngClass]="['w-[400px] ', otherProfile ? 'hidden' : 'hidden lg:block']"
+    ></div>
+    <app-profile-info
+      [otherProfile]="otherProfile"
+      [fullname]="(profile$ | async)?.fullName ?? ''"
+      [username]="(profile$ | async)?.username ?? ''"
+      [bio]="(profile$ | async)?.bio ?? ''"
+      [follower]="(profile$ | async)?.followers ?? []"
+      [following]="(profile$ | async)?.following ?? []"
+    />
+    <app-profile-cta [otherProfile]="otherProfile" />
+  </div>
+</div>

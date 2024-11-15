@@ -1,0 +1,71 @@
+<div
+  [ngClass]="[
+    'flex ',
+    otherProfile
+      ? 'flex flex-col w-full px-6 py-2'
+      : 'flex flex-col p-4 rounded-lg w-full md:w-[500px] lg:w-[500px] mx-auto'
+  ]"
+>
+  <div>
+    <h2 class="text-2xl font-semibold text-white">{{ fullname }}</h2>
+    <p class="text-sm text-gray-500 mt-2">{{ username }}</p>
+    @if (!otherProfile) {
+    <div class="flex mt-4 space-x-8 font-medium">
+      <div
+        class="flex items-center cursor-pointer"
+        (click)="openDialog('followers')"
+      >
+        <span class="text-sm text-white">Followers</span>
+        <span class="text-sm text-gray-500 ml-2">{{ follower.length }}</span>
+      </div>
+      <div
+        class="flex items-center cursor-pointer"
+        (click)="openDialog('following')"
+      >
+        <span class="text-sm text-white">Following</span>
+        <span class="text-sm text-gray-500 ml-2">{{ following.length }}</span>
+      </div>
+    </div>
+    <app-dialog [(isOpen)]="dialogOpen" (close)="closeDialog()">
+      <div class="">
+        <div class="text-[#FFFFFF] mb-6">
+          <span class="font-medium">{{ dialogType }}</span>
+          @if(dialogType === 'following'){
+          <span class="text-gray-500 text-sm ml-2">
+            {{ following.length }}</span
+          >
+          } @else{
+          <span class="text-gray-500 text-sm ml-2">
+            {{ follower.length }}
+          </span>
+          }
+        </div>
+        <app-text-field
+          placeholder="Search..."
+          [(value)]="searchQuery"
+          [showSearchIcon]="true"
+          inputClass="bg-gray-100"
+        />
+        @if(dialogType === 'following'){
+        <div *ngFor="let profile of filteredFollowing; trackBy: trackById">
+          <app-followers-card
+            [profile]="profile"
+            [follower]="follower"
+            [type]="'following'"
+          ></app-followers-card>
+        </div>
+        }@else {
+        <div *ngFor="let profile of filteredFollowers; trackBy: trackById">
+          <app-followers-card
+            [profile]="profile"
+            [following]="following"
+            [type]="'follower'"
+          ></app-followers-card>
+        </div>
+        }
+      </div>
+    </app-dialog>
+    }
+    <p class="text-sm mt-4 font-light text-white" [innerHTML]="bio"></p>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<button
+  [ngClass]="[
+    'w-full',
+    'flex items-center text-[12px]  cursor-pointer justify-center font-normal rounded-md transition-all duration-200 px-4 py-2',
+    getButtonStyles()
+  ]"
+  [disabled]="disabled"
+  (click)="onClick($event)"
+>
+  @if (icon && iconPosition === 'left'){
+  <i [class]="icon" class="mr-2"></i>
+  } @if(!iconOnly){
+  <span>{{ label }}</span>
+  } @if(icon && iconPosition === 'right'){
+  <img [src]="icon" />
+  }
+</button>
