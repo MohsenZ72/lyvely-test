@@ -1,27 +1,37 @@
 # Lyvely
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+# Angular User Profile with Tailwind CSS
 
-## Development server
+This is a standalone Angular project using **Tailwind CSS** for styling. The project is component-based and handles user profiles with the ability to follow and unfollow other users.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **Responsive design**: The project adjusts to different screen sizes.
+- **Profile Pages**:
+  - `/profile/1`: Your account
+  - `/profile/2`, `/profile/3`, ...: Other users' profiles
+- **Follow/Unfollow**: You can follow and unfollow users directly from their profile.
+- **Image error handling**: The project uses conditional logic to replace broken images with fallback images.
+- **Tailwind CSS**: The project uses Tailwind CSS for utility-first styling.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+> **Note**: The layout and features are based on a design, but only the necessary parts have been implemented for this project. The full design is not complete, but the key features are functional.
 
-## Build
+## Setup
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To get started with the project, follow these steps:
 
-## Running unit tests
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+2. **Run in development mode**:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+   ```bash
+   npm run dev
+   ```
 
-## Running end-to-end tests
+   This will start the project in development mode, and you can view it in your browser.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ## Standalone or Modular
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+   The project is standalone but can be modularized if needed for larger applications. With more time, I could improve the project further. Let me know which approach is better for your needs—I’m passionate about contributing to your team and can be helpful in making this work for your project.
